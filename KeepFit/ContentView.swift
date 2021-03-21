@@ -17,7 +17,6 @@ struct ContentView: View
     {
         NavigationView
         {
-            
             ZStack
             {
                 Color(.systemGray5)
