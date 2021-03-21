@@ -14,8 +14,7 @@ struct DashboardView: View {
             Text("Profile")
                 .padding()
                 .tabItem {
-                    Image(systemName: "1.circle")
-                        .resizable()
+                    Image(systemName: "person.crop.circle")
                     Text("Profile")
                 }
                 .tag(1)
@@ -23,21 +22,21 @@ struct DashboardView: View {
             Text("Exercise")
                 .padding()
                 .tabItem {
-                    Image(systemName: "2.circle")
+                    Image(systemName: "bolt.circle.fill")
                     Text("Exercise")
                 }
                 .tag(2)
             Text("Exercise")
                 .padding()
                 .tabItem {
-                    Image(systemName: "3.circle")
+                    Image(systemName: "icloud.and.arrow.up.fill")
                     Text("Upload")
                 }
                 .tag(3)
             Text("Exercise")
                 .padding()
                 .tabItem {
-                    Image(systemName: "4.circle")
+                    Image(systemName: "magnifyingglass.circle.fill")
                     Text("Search")
                 }
                 .tag(4)
