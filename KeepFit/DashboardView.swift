@@ -11,7 +11,7 @@ struct DashboardView: View {
     @State var selectedView = 1
     var body: some View {
         TabView {
-            Text("Home")
+            Text("Profile")
                 .padding()
                 .tabItem {
                     Image(systemName: "1.circle")
