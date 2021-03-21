@@ -47,6 +47,7 @@ struct DashboardView: View {
                     Text("Categories")
                 }
                 .tag(5)
+                .navigationBarBackButtonHidden(true)
             
         }
     }
