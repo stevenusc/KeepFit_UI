@@ -51,7 +51,7 @@ struct DashboardView: View
                 .padding()
                 .tabItem
                 {
-                    Image(systemName: "5.circle")
+                    Image(systemName: "square.grid.2x2.fill")
                     Text("Categories")
                 }
                 .tag(5)
