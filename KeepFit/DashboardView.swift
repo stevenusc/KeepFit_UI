@@ -6,6 +6,64 @@
 //
 
 import SwiftUI
+
+struct DashboardView: View {
+    @State var selectedView = 1
+    var body: some View {
+        TabView {
+            Text("Profile")
+                .padding()
+                .tabItem {
+                    Image(systemName: "1.circle")
+                        .resizable()
+                    Text("Profile")
+                }
+                .tag(1)
+            
+            Text("Exercise")
+                .padding()
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Exercise")
+                }
+                .tag(2)
+            Text("Exercise")
+                .padding()
+                .tabItem {
+                    Image(systemName: "3.circle")
+                    Text("Upload")
+                }
+                .tag(3)
+            Text("Exercise")
+                .padding()
+                .tabItem {
+                    Image(systemName: "4.circle")
+                    Text("Search")
+                }
+                .tag(4)
+            Text("Exercise")
+                .padding()
+                .tabItem {
+                    Image(systemName: "5.circle")
+                    Text("Categories")
+                }
+                .tag(5)
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
 struct DashboardView: View {
     
     @ObservedObject var viewRouter = ViewRouter()
@@ -94,7 +152,7 @@ struct DashboardView: View {
         }
     }
 }
-
+ */
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView()

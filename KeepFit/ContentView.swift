@@ -17,19 +17,19 @@ struct ContentView: View
     {
         NavigationView
         {
-                    
+            
             ZStack
             {
                 Color(.systemGray5)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .edgesIgnoringSafeArea(.all)
                 
                 //KeepFit Logo
                 VStack
                 {
                     Image("KeepFit_logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200.0, height: 700.0, alignment: .top)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200.0, height: 700.0, alignment: .top)
                 }
                 
                 //Sign In
@@ -38,7 +38,7 @@ struct ContentView: View
                     Text("Sign In")
                         .foregroundColor(.black)
                         .font(.system(size:26))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding(.top, 15)
                     TextField("Email Address", text:$emailAddress)
@@ -64,7 +64,7 @@ struct ContentView: View
                             .cornerRadius(22)
                             .font(.system(size:15))
                             .padding(.top, 50)
-                    
+                        
                     }
                 }
                 VStack
@@ -73,8 +73,8 @@ struct ContentView: View
                     NavigationLink(destination: CreateAccountView())
                     {
                         Text("Sign Up")
-                        .foregroundColor(.black)
-                        .padding(.bottom, 50)
+                            .foregroundColor(.black)
+                            .padding(.bottom, 50)
                     }
                     
                 }
