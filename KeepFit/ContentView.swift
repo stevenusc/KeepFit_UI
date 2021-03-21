@@ -63,7 +63,6 @@ struct ContentView: View
                             .cornerRadius(22)
                             .font(.system(size:15))
                             .padding(.top, 50)
-                        
                     }
                 }
                 VStack
@@ -75,7 +74,6 @@ struct ContentView: View
                             .foregroundColor(.black)
                             .padding(.bottom, 50)
                     }
-                    
                 }
             }
         }
