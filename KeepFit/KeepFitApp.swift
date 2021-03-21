@@ -1,17 +1,18 @@
 //
 //  KeepFitApp.swift
-//  KeepFit
 //
-//  Created by Steven Williams on 3/20/21.
+//
+//
 //
 
 import SwiftUI
 
 @main
 struct KeepFitApp: App {
+    @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
         }
     }
 }
