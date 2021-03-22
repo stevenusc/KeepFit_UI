@@ -10,6 +10,7 @@
 		3522211F260740190033361E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3522211E260740190033361E /* Profile.swift */; };
 		3553CC232606BE82001058E1 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553CC222606BE82001058E1 /* CreateAccountView.swift */; };
 		3553CC302606CF87001058E1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553CC2F2606CF87001058E1 /* DashboardView.swift */; };
+		358A44D7260816280091275F /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A44D6260816280091275F /* Upload.swift */; };
 		358A4DB92606B7D60014F2FA /* KeepFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DB82606B7D60014F2FA /* KeepFitApp.swift */; };
 		358A4DBB2606B7D60014F2FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DBA2606B7D60014F2FA /* ContentView.swift */; };
 		358A4DBD2606B7D70014F2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358A4DBC2606B7D70014F2FA /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		3522211E260740190033361E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3553CC222606BE82001058E1 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		3553CC2F2606CF87001058E1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		358A44D6260816280091275F /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		358A4DB52606B7D60014F2FA /* KeepFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		358A4DB82606B7D60014F2FA /* KeepFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepFitApp.swift; sourceTree = "<group>"; };
 		358A4DBA2606B7D60014F2FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				358A4DBA2606B7D60014F2FA /* ContentView.swift */,
 				3553CC2F2606CF87001058E1 /* DashboardView.swift */,
+				358A44D6260816280091275F /* Upload.swift */,
 				3522211E260740190033361E /* Profile.swift */,
 				3553CC222606BE82001058E1 /* CreateAccountView.swift */,
 				358A4DB82606B7D60014F2FA /* KeepFitApp.swift */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358A44D7260816280091275F /* Upload.swift in Sources */,
 				3522211F260740190033361E /* Profile.swift in Sources */,
 				3553CC232606BE82001058E1 /* CreateAccountView.swift in Sources */,
 				3553CC302606CF87001058E1 /* DashboardView.swift in Sources */,

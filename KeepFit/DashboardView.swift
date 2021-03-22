@@ -14,15 +14,14 @@ struct DashboardView: View
     {
         TabView
         {
-            Text("Profile")
+            ProfileV()
                 .padding()
                 .tabItem
                 {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
                 }
-                .tag(1)
-            
+
             Text("Exercise")
                 .padding()
                 .tabItem
@@ -31,15 +30,35 @@ struct DashboardView: View
                     Text("Exercise")
                 }
                 .tag(2)
-            Text("Exercise")
-                .padding()
-                .tabItem
-                {
-                    Image(systemName: "icloud.and.arrow.up.fill")
-                    Text("Upload")
+            
+            VStack{
+                    Spacer()
+                    NavigationLink(destination: Upload())
+                    {
+                        let live = Text("GO LIVE")
+                            .foregroundColor(.black)
+                            .padding(50)
+                        live.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                            
+                    }
+                    Spacer()
+                    NavigationLink(destination: Upload())
+                    {
+                        let upload = Text("UPLOAD")
+                            .foregroundColor(.black)
+                            .padding(50)
+                        upload.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    }
+                    Spacer()
                 }
-                .tag(3)
-            Text("Exercise")
+                    .padding()
+                    .tabItem
+                    {
+                        Image(systemName: "icloud.and.arrow.up.fill")
+                        Text("Upload")
+                    }
+                    .tag(3)
+            Text("Search")
                 .padding()
                 .tabItem
                 {
@@ -47,7 +66,7 @@ struct DashboardView: View
                     Text("Search")
                 }
                 .tag(4)
-            Text("Exercise")
+            Text("Categories")
                 .padding()
                 .tabItem
                 {
@@ -57,6 +76,7 @@ struct DashboardView: View
                 .tag(5)
             
         }.navigationBarBackButtonHidden(true)
+        
     }
 }
 
@@ -65,3 +85,37 @@ struct DashboardView_Previews: PreviewProvider {
         DashboardView()
     }
 }
+
+struct ProfileV: View
+{
+    var body: some View
+    {
+        NavigationView
+        {
+            
+            ZStack
+            {
+                //KeepFit Logo
+                VStack
+                {
+                    Image("profile_pic")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .offset(y: -240)
+                }
+                .navigationBarItems(trailing: NavigationLink(destination: Profile())
+                {
+                    Text("Edit Profile")
+                })
+                
+            }
+            .navigationBarItems(trailing: NavigationLink(destination: Profile())
+            {
+                Text("Edit Profile")
+            })
+        }
+    }
+    
+}
+
