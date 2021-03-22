@@ -13,10 +13,6 @@ struct Profile: View
     {
         ZStack
         {
-            Color(.systemGray5)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            
-            //KeepFit Logo
             VStack
             {
                 Image("profile_pic")

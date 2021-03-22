@@ -14,7 +14,7 @@ struct DashboardView: View
     {
         TabView
         {
-            ProfileV()
+            ProfileView()
                 .padding()
                 .tabItem
                 {
@@ -31,33 +31,14 @@ struct DashboardView: View
                 }
                 .tag(2)
             
-            VStack{
-                    Spacer()
-                    NavigationLink(destination: Upload())
-                    {
-                        let live = Text("GO LIVE")
-                            .foregroundColor(.black)
-                            .padding(50)
-                        live.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            
-                    }
-                    Spacer()
-                    NavigationLink(destination: Upload())
-                    {
-                        let upload = Text("UPLOAD")
-                            .foregroundColor(.black)
-                            .padding(50)
-                        upload.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                    }
-                    Spacer()
+            UploadView()
+                .padding()
+                .tabItem
+                {
+                    Image(systemName: "icloud.and.arrow.up.fill")
+                    Text("Upload")
                 }
-                    .padding()
-                    .tabItem
-                    {
-                        Image(systemName: "icloud.and.arrow.up.fill")
-                        Text("Upload")
-                    }
-                    .tag(3)
+                .tag(3)
             Text("Search")
                 .padding()
                 .tabItem
@@ -86,7 +67,7 @@ struct DashboardView_Previews: PreviewProvider {
     }
 }
 
-struct ProfileV: View
+struct ProfileView: View
 {
     var body: some View
     {
@@ -119,3 +100,35 @@ struct ProfileV: View
     
 }
 
+struct UploadView: View
+{
+    var body: some View
+    {
+        NavigationView
+        {
+            ZStack
+            {
+                VStack{
+                        Spacer()
+                        NavigationLink(destination: Upload())
+                        {
+                            let live = Text("GO LIVE")
+                                .foregroundColor(.black)
+                                .padding(50)
+                            live.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                
+                        }
+                        Spacer()
+                        NavigationLink(destination: Upload())
+                        {
+                            let upload = Text("UPLOAD")
+                                .foregroundColor(.black)
+                                .padding(50)
+                            upload.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        }
+                        Spacer()
+                    }
+            }
+        }
+    }
+}
