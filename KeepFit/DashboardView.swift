@@ -76,7 +76,6 @@ struct ProfileView: View
             
             ZStack
             {
-                //KeepFit Logo
                 VStack
                 {
                     Image("profile_pic")

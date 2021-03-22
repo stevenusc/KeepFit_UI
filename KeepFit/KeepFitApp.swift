@@ -11,7 +11,7 @@ import SwiftUI
 struct KeepFitApp: App {
     var body: some Scene {
         WindowGroup {
-            DashboardView()
+            ContentView()
         }
     }
 }
