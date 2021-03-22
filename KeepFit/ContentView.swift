@@ -53,8 +53,10 @@ struct ContentView: View
                         .multilineTextAlignment(.center)
                         .cornerRadius(22)
                     
-                    NavigationLink(destination: DashboardView())
+                    NavigationLink(destination: DashboardView().navigationBarTitle("")
+                                    .navigationBarHidden(true))
                     {
+                        
                         Text("Sign In")
                             .foregroundColor(.black)
                             .frame(width: 250, height: 45)
@@ -76,7 +78,8 @@ struct ContentView: View
                     }
                 }
             }
-        }
+        }.navigationBarBackButtonHidden(true).navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 

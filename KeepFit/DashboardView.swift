@@ -21,7 +21,7 @@ struct DashboardView: View
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
                 }
-
+                .tag(1)
             Text("Exercise")
                 .padding()
                 .tabItem
@@ -56,24 +56,19 @@ struct DashboardView: View
                 }
                 .tag(5)
             
-        }.navigationBarBackButtonHidden(true)
+        }.navigationBarBackButtonHidden(true).navigationBarTitle("")
+        .navigationBarHidden(true)
         
     }
 }
 
-struct DashboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardView()
-    }
-}
+
 
 struct ProfileView: View
 {
     var body: some View
     {
-        NavigationView
-        {
-            
+        NavigationView{
             ZStack
             {
                 VStack
@@ -81,20 +76,91 @@ struct ProfileView: View
                     Image("profile_pic")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
-                        .offset(y: -240)
+                        .frame(width: 200.0, height: 700.0, alignment: .top)
                 }
                 .navigationBarItems(trailing: NavigationLink(destination: Profile())
                 {
                     Text("Edit Profile")
                 })
+                VStack
+                {
+                    Text("Username")
+                        .foregroundColor(.black)
+                        .font(.system(size:20))
+                        .multilineTextAlignment(.center)
+                        .offset(y: -160)
+                }
+                VStack
+                {
+                    Text("Vitals")
+                        .foregroundColor(.black)
+                        .font(.system(size:26))
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .offset(y: -60)
+                }
                 
-            }
-            .navigationBarItems(trailing: NavigationLink(destination: Profile())
+                VStack
+                {
+                    Text("Age: ")
+                        .foregroundColor(.black)
+                        .font(.system(size:18))
+                        .multilineTextAlignment(.center)
+                        .offset(y: -10)
+                }
+                
+                VStack
+                {
+                    Text("Weight: ")
+                        .foregroundColor(.black)
+                        .font(.system(size:18))
+                        .multilineTextAlignment(.center)
+                        .offset(y: 20)
+                }
+                
+                VStack
+                {
+                    Text("Height: ")
+                        .foregroundColor(.black)
+                        .font(.system(size:18))
+                        .multilineTextAlignment(.center)
+                        .offset(y: 50)
+                }
+                
+                VStack
+                {
+                    Text("Liked Videos: ")
+                        .foregroundColor(.black)
+                        .font(.system(size:18))
+                        .multilineTextAlignment(.leading)
+                        .offset(y: 100)
+                }
+                
+                VStack
+                {
+                    Text("The Perfect blah blah blah blah blah blah")
+                        .foregroundColor(.black)
+                        .frame(width: 350.0, height: 700.0, alignment: .leading)
+                        .font(.system(size:18))
+                        .offset(y: 140)
+                }
+                
+                VStack
+                {
+                    Text("The Other Perfect blah blah blah blah blah blah")
+                        .foregroundColor(.black)
+                        .frame(width: 350.0, height: 700.0, alignment: .leading)
+                        .font(.system(size:18))
+                        .offset(y: 180)
+                }
+            
+            /*.navigationBarItems(trailing: NavigationLink(destination: Profile())
             {
                 Text("Edit Profile")
-            })
+            })*/
         }
+        }.navigationBarBackButtonHidden(true).navigationBarTitle("")
+        .navigationBarHidden(true)
     }
     
 }
@@ -129,5 +195,11 @@ struct UploadView: View
                     }
             }
         }
+    }
+}
+
+struct DashboardView_Previews: PreviewProvider {
+    static var previews: some View {
+        DashboardView()
     }
 }
